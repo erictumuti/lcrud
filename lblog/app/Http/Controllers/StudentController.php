@@ -9,9 +9,9 @@ class StudentController extends Controller
 {
     public function index(){
         
-       // $students = Student::all();
+        $students = Student::all();
         
-        return view('welcome');
+        return view('welcome',compact('students'));
     }
     
      public function create(){

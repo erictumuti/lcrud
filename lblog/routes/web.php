@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 //use of controller
 Route::get('/', 'studentController@index' )->name('home');
-Route::get('/create', 'studentController@create' )->name('create');
-Route::post('/create', 'studentController@store' )->name('store');
+Route::get('/create', 'studentController@create' )->name('create'); //route of  page
+Route::post('/create', 'studentController@store' )->name('store'); //route of  page
 
 
 
