@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'studentController@index' )->name('home');
 Route::get('/create', 'studentController@create' )->name('create'); //route of  page
 Route::post('/create', 'studentController@store' )->name('store'); //route of  page
-
-
+Route::get('/edit/{id}', 'studentController@edit' )->name('edit');
+Route::post('/update/{id}', 'studentController@update' )->name('update');
 
 
 
