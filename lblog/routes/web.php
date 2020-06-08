@@ -18,7 +18,7 @@ Route::get('/create', 'studentController@create' )->name('create'); //route of  
 Route::post('/create', 'studentController@store' )->name('store'); //route of  page
 Route::get('/edit/{id}', 'studentController@edit' )->name('edit');
 Route::post('/update/{id}', 'studentController@update' )->name('update');
-
+Route::delete('/delete/{id}', 'studentController@delete' )->name('delete');
 
 
 Route::get('/test', 'TestController@index' );

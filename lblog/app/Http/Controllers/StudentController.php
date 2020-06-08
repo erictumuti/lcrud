@@ -9,7 +9,7 @@ class StudentController extends Controller
 {
     public function index(){
         
-        $students = Student::all();
+        $students = Student::paginate(3);
         
         return view('welcome',compact('students'));
     }
@@ -63,6 +63,10 @@ class StudentController extends Controller
          return redirect(route('home'))->with('successMsg','student successfully updated');
         
 
+    }
+    public function delete($id){
+        Student::find($id)->delete();
+        return redirect(route('home'))->with('successMsg','student deleted successfully');
     }
 }
 
